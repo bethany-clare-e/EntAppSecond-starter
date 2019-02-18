@@ -1,0 +1,44 @@
+﻿@page
+@model EntAppSecond.Pages.stud.CreateModel
+@addTagHelper *, Microsoft.AspNetcore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    .field-validation-error {
+        color: red;
+        font-size: 80%;
+        font-style: italic;
+    }
+
+    .validation-summary-errors {
+        border: solid red;
+    }
+</style>
+
+<h2>Create</h2>
+
+<form method="post">
+
+    <div>
+        <label asp-for="Student.FirstName"></label>
+        <input asp-for="Student.FirstName" />
+    </div>
+
+    <div>
+        <label asp-for="Student.LastName"></label>
+        <input asp-for="Student.LastName" />
+    </div>
+
+    <div>
+        <label asp-for="Student.StudentID"></label>
+        <input asp-for="Student.StudentID" />
+    </div>
+
+    <button type="submit">Press Me!</button>
+
+    <div asp-validation-summary="All"></div>
+
+    <span asp-validation-for="Student.StudentID"></span>
+</form>
