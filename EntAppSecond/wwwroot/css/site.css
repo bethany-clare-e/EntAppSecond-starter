@@ -18,4 +18,14 @@ body {
     border: solid;
 }
 
+.field-validation-error {
+    color: red;
+    font-size: 80%;
+    font-style: italic;
+}
+
+.validation-summary-errors {
+    border: solid red;
+    background-color:hotpink;
+}
 

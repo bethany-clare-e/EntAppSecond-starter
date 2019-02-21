@@ -5,17 +5,7 @@
     ViewData["Title"] = "Create";
 }
 
-<style>
-    .field-validation-error {
-        color: red;
-        font-size: 80%;
-        font-style: italic;
-    }
 
-    .validation-summary-errors {
-        border: solid red;
-    }
-</style>
 
 <h2>Create</h2>
 
@@ -36,9 +26,34 @@
         <input asp-for="Student.StudentID" />
     </div>
 
+    <div>
+        <label asp-for="Student.DOB"></label>
+        <input asp-for="Student.DOB" />
+    </div>
+
+    <div>
+        <label asp-for="Student.NumberOfModules"></label>
+        <input asp-for="Student.NumberOfModules" />
+    </div>
+
+    <div>
+        <label asp-for="Student.HeightInCM"></label>
+        <input asp-for="Student.HeightInCM" />
+    </div>
+
+    <div>
+        <label asp-for="Student.Email"></label>
+        <input asp-for="Student.Email" />
+    </div>
+
+    <div>
+        <label asp-for="Student.EmailConfirm"></label>
+        <input asp-for="Student.EmailConfirm" />
+    </div>
+
     <button type="submit">Press Me!</button>
 
     <div asp-validation-summary="All"></div>
 
-    <span asp-validation-for="Student.StudentID"></span>
+    @*<span asp-validation-for="Student.StudentID"></span>*@
 </form>
